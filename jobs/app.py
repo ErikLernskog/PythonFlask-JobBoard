@@ -23,7 +23,7 @@ def execute_sql(sql, values=(), commit=False, single=False):
         if single == True:
             results = cursor.fetchone()
         else:
-            results = cursor.getchall()
+            results = cursor.fetchall()
     cursor.close()
     return results
 
